@@ -87,6 +87,42 @@ def clean_entity_text(entity_text):
     
     return entity_text
 
+def remove_overlapping_entities(entities):
+    """
+    Remove overlapping entities, keeping the longer ones.
+    This prevents double-counting when merged entities overlap with individual entities.
+    """
+    if not entities:
+        return entities
+    
+    # Sort by start position
+    sorted_entities = sorted(entities, key=lambda x: x['start'])
+    result = []
+    
+    for entity in sorted_entities:
+        # Check if this entity overlaps with any already added entity
+        overlaps = False
+        for existing in result:
+            # Check for overlap
+            if (entity['start'] < existing['end'] and entity['end'] > existing['start']):
+                # There's an overlap - keep the longer entity
+                entity_length = entity['end'] - entity['start']
+                existing_length = existing['end'] - existing['start']
+                
+                if entity_length > existing_length:
+                    # Remove the shorter existing entity and add this longer one
+                    result.remove(existing)
+                    result.append(entity)
+                # If existing is longer or equal, skip this entity
+                overlaps = True
+                break
+        
+        if not overlaps:
+            result.append(entity)
+    
+    return result
+
+
 def merge_consecutive_entities(entities, gap_threshold=5):
     """
     Merge consecutive entities of the same type that are close to each other.
@@ -185,6 +221,9 @@ def evaluate_single_document(predicted_entities: List[Dict],
     # Step 2: Merge consecutive entities of the same type (names, dates, etc.)
     merged_predictions = merge_consecutive_entities(mapped_predictions)
     
+    # Step 2.5: Remove overlapping entities to prevent double-counting
+    deduplicated_predictions = remove_overlapping_entities(merged_predictions)
+    
     # Step 3: Filter ground truth to use only first annotator in document
     if gt_entities:
         # Get the first annotator found in this document
@@ -208,7 +247,7 @@ def evaluate_single_document(predicted_entities: List[Dict],
     
     # Step 5: Initialize metrics
     metrics = {
-        'total_predicted': len(merged_predictions),
+        'total_predicted': len(deduplicated_predictions),
         'total_ground_truth': len(filtered_gt),
         'strict_matches': 0,
         'relaxed_matches': 0,
@@ -223,10 +262,10 @@ def evaluate_single_document(predicted_entities: List[Dict],
     
     # Track which entities are matched
     gt_matched = [False] * len(filtered_gt)
-    pred_used = [False] * len(merged_predictions)
+    pred_used = [False] * len(deduplicated_predictions)
     
     # Step 6: Find matches using improved logic (one-to-one matching) with multi-GT support
-    for pred_idx, pred in enumerate(merged_predictions):
+    for pred_idx, pred in enumerate(deduplicated_predictions):
         best_matches = []  # Support matching multiple GT entities
         best_total_iou = 0.0
         best_gt_indices = []
@@ -304,13 +343,13 @@ def evaluate_single_document(predicted_entities: List[Dict],
                     combined_iou = calculate_iou(pred_span, combined_span)
                     
                     # Check if this is a better match than single entities
-                    if combined_iou > best_total_iou and combined_iou >= 0.3:
+                    if combined_iou > best_total_iou and combined_iou >= 0.6:
                         best_total_iou = combined_iou
                         best_matches = consecutive_gts
                         best_gt_indices = consecutive_indices
         
         # Record match if found (only the best match per prediction)
-        if best_matches and best_total_iou >= 0.3:  # Minimum IoU to prevent very weak matches
+        if best_matches and best_total_iou >= 0.6:  # Minimum IoU to prevent very weak matches
             pred_used[pred_idx] = True
             for gt_idx in best_gt_indices:
                 gt_matched[gt_idx] = True  # Mark all matched GTs as used
@@ -342,7 +381,7 @@ def evaluate_single_document(predicted_entities: List[Dict],
             })
     
     # Step 7: Count false positives and false negatives
-    for pred_idx, pred in enumerate(merged_predictions):
+    for pred_idx, pred in enumerate(deduplicated_predictions):
         if not pred_used[pred_idx] and pred['original_label'] not in IGNORE_FP_LABELS:
             metrics['fp'] += 1
             metrics['unmatched_predictions'].append(pred)
