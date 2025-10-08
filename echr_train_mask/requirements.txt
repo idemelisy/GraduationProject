@@ -1,0 +1,8 @@
+# Requirements for the text anonymization benchmark processing
+huggingface_hub>=0.16.0
+datasets>=2.14.0
+presidio-analyzer>=2.2.0
+spacy>=3.5.0
+
+# Note: You may also need to download the spaCy English model:
+# python -m spacy download en_core_web_sm

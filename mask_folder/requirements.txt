@@ -1,0 +1,9 @@
+pandas
+transformers
+torch
+nltk
+nemo_toolkit[all]
+nemo-curator
+presidio-analyzer
+presidio-anonymizer
+ai4privacy
