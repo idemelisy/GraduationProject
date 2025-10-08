@@ -1,2 +1,0 @@
-usage: ai4privacy_evaluate.py [-h] [--input INPUT] [--output OUTPUT]
-ai4privacy_evaluate.py: error: unrecognized arguments: output_ai4privacy.json annotations.json

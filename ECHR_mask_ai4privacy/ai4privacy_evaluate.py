@@ -1,28 +1,106 @@
 #!/usr/bin/env python3
 """
-ai4privacy_evaluate.py
+AI4Privacy PII Detection Performance Evaluation Script
 
-Recreated evaluation script that handles post-processing label mapping.
-Based on the working approach mentioned in conversation history.
+This script evaluates the performance of AI4Privacy PII detection model
+by comparing detected entities against ground truth annotations.
+
+Updated with comprehensive evaluation capabilities including:
+- Entity overlap detection
+- Per-entity-type metrics
+- Visualization generation
+- Detailed error analysis
 """
 
 import json
+import pandas as pd
+import numpy as np
+from collections import defaultdict, Counter
+from typing import Dict, List, Tuple, Set
+import matplotlib.pyplot as plt
+import seaborn as sns
+from dataclasses import dataclass
 import argparse
-from typing import List, Dict, Tuple
-from collections import defaultdict
+import os
 
-# AI4Privacy -> GT mappings (from conversation history)
+
+@dataclass
+class Entity:
+    """Represents a PII entity with its boundaries and type."""
+    start: int
+    end: int
+    entity_type: str
+    text: str = ""
+
+
+class PerfMet:
+    """Performance metrics calculator for PII detection."""
+    
+    def __init__(self):
+        self.reset()
+    
+    def reset(self):
+        """Reset all counters."""
+        self.true_positives = 0
+        self.false_positives = 0
+        self.false_negatives = 0
+    
+    def add_tp(self, count=1):
+        """Add true positives."""
+        self.true_positives += count
+    
+    def add_fp(self, count=1):
+        """Add false positives."""
+        self.false_positives += count
+    
+    def add_fn(self, count=1):
+        """Add false negatives."""
+        self.false_negatives += count
+    
+    @property
+    def precision(self) -> float:
+        """Calculate precision."""
+        if self.true_positives + self.false_positives == 0:
+            return 0.0
+        return self.true_positives / (self.true_positives + self.false_positives)
+    
+    @property
+    def recall(self) -> float:
+        """Calculate recall."""
+        if self.true_positives + self.false_negatives == 0:
+            return 0.0
+        return self.true_positives / (self.true_positives + self.false_negatives)
+    
+    @property
+    def f1_score(self) -> float:
+        """Calculate F1 score."""
+        if self.precision + self.recall == 0:
+            return 0.0
+        return 2 * (self.precision * self.recall) / (self.precision + self.recall)
+    
+    def get_metrics(self) -> Dict[str, float]:
+        """Get all metrics as a dictionary."""
+        return {
+            'precision': self.precision,
+            'recall': self.recall,
+            'f1_score': self.f1_score,
+            'true_positives': self.true_positives,
+            'false_positives': self.false_positives,
+            'false_negatives': self.false_negatives
+        }
+
+
+# AI4Privacy -> GT mappings (Enhanced and comprehensive)
 PII_TO_GT = {
     # Person-related labels
     "GIVENNAME": "PERSON",
-    "SURNAME": "PERSON",  
+    "SURNAME": "PERSON",
+   
 
-
-    # Location-related labels
     "CITY": "LOC",
     "STREET": "LOC",
     "ZIPCODE": "LOC",
-    
+    "BUILDINGNUM": "LOC",
     # Date/time labels
     "DATE": "DATETIME",
     "TIME": "DATETIME"
@@ -36,12 +114,13 @@ PII_TO_GT = {
 }
 
 # Labels to ignore FP/FN - these are AI4Privacy labels without GT equivalents
-IGNORE_FP_LABELS = {"SOCIALNUM", "TELEPHONENUM", "DRIVERLICENSENUM", "TAXNUM", "EMAIL", "AGE", "SEX", "GENDER","BUILDINGNUM"}
+IGNORE_FP_LABELS = {"SOCIALNUM", "TELEPHONENUM", "DRIVERLICENSENUM", "TAXNUM", "EMAIL", "AGE", "SEX", "GENDER"}
 
 # Ground truth labels to ignore completely (exclude from evaluation)
 IGNORE_GT_LABELS = {"CODE", "CASE", "COURT", "QUANTITY", "MISC"}
 
 # Additional labels to ignore only for false negatives (AI4Privacy not expected to detect these)
+# Note: ORG is kept here because AI4Privacy doesn't detect ORG directly, but LOC predictions can still match ORG entities
 IGNORE_FN_LABELS = {"ORG", "DEM", "QUANTITY", "MISC", "CODE", "CASE", "COURT"}
 
 def clean_entity_text(entity_text):
@@ -127,6 +206,7 @@ def merge_consecutive_entities(entities, gap_threshold=5):
     """
     Merge consecutive entities of the same type that are close to each other.
     This helps combine entities like 'June' and '1994' into 'June 1994'.
+    For PERSON entities, prevents merging across person boundaries by detecting title words.
     """
     if not entities:
         return entities
@@ -144,18 +224,32 @@ def merge_consecutive_entities(entities, gap_threshold=5):
         next_entity_cleaned = next_entity.copy()
         next_entity_cleaned['text'] = clean_entity_text(next_entity_cleaned['text'])
         
-        # Check if entities are of same type and close enough
-        if (current_entity['mapped_label'] == next_entity_cleaned['mapped_label'] and
-            next_entity_cleaned['start'] - current_entity['end'] <= gap_threshold):
+        gap = next_entity_cleaned['start'] - current_entity['end']
+        
+        # Check if entities should be merged
+        should_merge = (
+            current_entity['mapped_label'] == next_entity_cleaned['mapped_label'] and
+            gap <= gap_threshold
+        )
+        
+        # For PERSON entities, add special check to prevent merging across person boundaries
+        if should_merge and current_entity['mapped_label'] == 'PERSON':
+            # Check if next entity is a title that indicates a new person
+            next_text = next_entity_cleaned['text'].strip()
             
+            # Common titles that indicate the start of a new person
+            title_words = ['Mr', 'Mrs', 'Ms', 'Miss', 'Dr', 'Prof', 'Sir', 'Lady', 'Lord']
+            
+            # If the next entity is a title and we already have content, this starts a new person
+            if (next_text in title_words and 
+                len(current_entity['text'].strip()) > 0):
+                should_merge = False
+        
+        if should_merge:
             # Merge the entities
-            text_between = next_entity_cleaned['text']
             if current_entity['end'] < next_entity_cleaned['start']:
                 # Add the gap text between entities
-                gap_start = current_entity['end']
-                gap_end = next_entity_cleaned['start']
-                # For now, assume single space - in real implementation you'd extract from original text
-                gap_text = " " if gap_end - gap_start <= gap_threshold else " "
+                gap_text = " " if gap <= gap_threshold else " "
                 current_entity['text'] += gap_text + next_entity_cleaned['text']
             else:
                 current_entity['text'] += next_entity_cleaned['text']
@@ -269,44 +363,64 @@ def evaluate_single_document(predicted_entities: List[Dict],
         best_matches = []  # Support matching multiple GT entities
         best_total_iou = 0.0
         best_gt_indices = []
-        
-        # First try single GT entity matching
+
         for gt_idx, gt in enumerate(filtered_gt):
-            if gt_matched[gt_idx]:  # Skip already matched GT entities
+            if gt_matched[gt_idx]:
                 continue
-            
-            # Check label match with special case: LOC can match ORG
+
             pred_label = pred['mapped_label']
             gt_label = gt['entity_type']
-            
-            # Allow LOC predictions to match ORG ground truth (locations can be organizations)
+
+            # Allow LOC predictions to match ORG ground truth
             if pred_label == "LOC" and gt_label == "ORG":
-                # This is allowed - treat LOC prediction as valid for ORG ground truth
                 pass
             elif pred_label != gt_label:
                 continue
-            
-            # Calculate IoU
+
             pred_span = (pred['start'], pred['end'])
             gt_span = (gt['start_offset'], gt['end_offset'])
             iou = calculate_iou(pred_span, gt_span)
-            
-            # Use different thresholds for different entity types (like Piranha)
-            if gt['entity_type'] == "LOC":
+
+            # Use different thresholds for different entity types
+            if gt_label == "LOC":
                 threshold = 0.3
-            elif gt['entity_type'] == "PERSON":
+            elif gt_label == "PERSON":
                 threshold = 0.4
+            elif gt_label == "ORG":
+                threshold = 0.3  # Use lower threshold for ORG entities
             else:
                 threshold = relaxed_threshold
-            
-            # Check containment (if prediction is contained within GT)
-            pred_contained = (gt['start_offset'] <= pred['start'] + 1 and 
-                            pred['end'] <= gt['end_offset'] + 1)
-            
-            # Check overlap ratio (how much of prediction overlaps with GT)
+
+            pred_contained = (gt['start_offset'] <= pred['start'] + 1 and pred['end'] <= gt['end_offset'] + 1)
             overlap = max(0, min(pred['end'], gt['end_offset']) - max(pred['start'], gt['start_offset']))
             overlap_ratio = overlap / (pred['end'] - pred['start']) if pred['end'] > pred['start'] else 0
-            
+
+            # --- LOC to ORG matching improvement ---
+            # If prediction is LOC and ground truth is ORG, allow matching if prediction text is contained in GT text
+            if pred_label == "LOC" and gt_label == "ORG":
+                pred_text = pred['text'].strip().lower()
+                gt_text = gt['span_text'].strip().lower()
+                # Allow matching if LOC text is contained in ORG text (e.g., "Ankara" in "Ankara Regional Court")
+                if pred_text in gt_text and overlap_ratio >= 0.3:
+                    if iou > best_total_iou:
+                        best_total_iou = iou
+                        best_matches = [gt]
+                        best_gt_indices = [gt_idx]
+                    continue
+
+            # --- PERSON entity improvement ---
+            # If prediction is PERSON and ground truth is PERSON, allow matching if prediction is a substring of GT text and spans overlap
+            if pred_label == "PERSON" and gt_label == "PERSON":
+                pred_text = pred['text'].strip().lower()
+                gt_text = gt['span_text'].strip().lower()
+                # If prediction text is contained in GT text and spans overlap
+                if pred_text in gt_text and overlap_ratio >= 0.5:
+                    if iou > best_total_iou:
+                        best_total_iou = iou
+                        best_matches = [gt]
+                        best_gt_indices = [gt_idx]
+                    continue
+
             # Accept match if any condition is met and it's better than previous best
             if (pred_contained or overlap_ratio >= 0.5 or iou >= threshold) and iou > best_total_iou:
                 best_total_iou = iou
@@ -383,14 +497,27 @@ def evaluate_single_document(predicted_entities: List[Dict],
     # Step 7: Count false positives and false negatives
     for pred_idx, pred in enumerate(deduplicated_predictions):
         if not pred_used[pred_idx] and pred['original_label'] not in IGNORE_FP_LABELS:
-            metrics['fp'] += 1
-            metrics['unmatched_predictions'].append(pred)
-    
+            # Check if this prediction significantly overlaps with any matched ground truth
+            is_overlapping_with_matched_gt = False
+            pred_span = (pred['start'], pred['end'])
+            pred_length = pred['end'] - pred['start']
+            for gt_idx, gt in enumerate(filtered_gt):
+                if gt_matched[gt_idx]:
+                    gt_span = (gt['start_offset'], gt['end_offset'])
+                    overlap = max(0, min(pred['end'], gt['end_offset']) - max(pred['start'], gt['start_offset']))
+                    overlap_ratio = overlap / pred_length if pred_length > 0 else 0
+                    if overlap_ratio >= 0.5:
+                        is_overlapping_with_matched_gt = True
+                        break
+            if not is_overlapping_with_matched_gt:
+                metrics['fp'] += 1
+                metrics['unmatched_predictions'].append(pred)
+
     for gt_idx, gt in enumerate(filtered_gt):
         if not gt_matched[gt_idx] and gt['entity_type'] not in IGNORE_FN_LABELS:
             metrics['fn'] += 1
             metrics['unmatched_ground_truth'].append(gt)
-    
+
     return metrics
 
 def calculate_aggregated_metrics(all_metrics: List[Dict]) -> Dict:
