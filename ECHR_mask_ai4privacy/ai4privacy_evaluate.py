@@ -44,38 +44,96 @@ IGNORE_GT_LABELS = {"CODE", "CASE", "COURT", "QUANTITY", "MISC"}
 # Additional labels to ignore only for false negatives (AI4Privacy not expected to detect these)
 IGNORE_FN_LABELS = {"ORG", "DEM", "QUANTITY", "MISC", "CODE", "CASE", "COURT"}
 
-def merge_consecutive_entities(pred_list: List[Dict]) -> List[Dict]:
+def clean_entity_text(entity_text):
     """
-    Merge consecutive entities of the same type.
-    Based on Piranha's approach for merging nearby entities.
+    Clean entity text by removing trailing punctuation, whitespace, and newlines.
+    Also handles cases where extra words are included after the entity.
     """
-    if not pred_list:
-        return []
+    import re
+    
+    # First, handle the specific case where extra sentences are included
+    # Look for patterns like "entity.\n\nExtra" or "entity. Extra"
+    
+    # Split on sentence endings followed by whitespace/newlines and extra text
+    lines = entity_text.split('\n')
+    if len(lines) > 1:
+        # Take only the first line, which should contain the actual entity
+        entity_text = lines[0]
+    
+    # Remove trailing punctuation and whitespace
+    entity_text = re.sub(r'[.,:;!?\s]+$', '', entity_text)
+    
+    # Remove leading whitespace
+    entity_text = re.sub(r'^[\s]+', '', entity_text)
+    
+    # Handle cases where extra words are included after punctuation
+    # For dates/entities, try to keep only the meaningful part
+    words = entity_text.split()
+    if len(words) > 1:
+        # For date patterns, try to identify where the entity likely ends
+        date_patterns = [
+            r'\d{1,2}\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}',
+            r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}',
+            r'\d{1,2}\s+(January|February|March|April|May|June|July|August|September|October|November|December)',
+            r'(January|February|March|April|May|June|July|August|September|October|November|December)',
+            r'\d{4}'
+        ]
         
-    # Sort by start position
-    pred_list.sort(key=lambda x: x["start"])
-    merged = [pred_list[0].copy()]
+        # Try to match date patterns and extract just the date part
+        for pattern in date_patterns:
+            match = re.search(pattern, entity_text, re.IGNORECASE)
+            if match:
+                return match.group(0)
+    
+    return entity_text
 
-    for next_pred in pred_list[1:]:
-        current = merged[-1]
-        gap = next_pred["start"] - current["end"]
-
-        # Merge only if same mapped label and small gap
-        same_label = current["mapped_label"] == next_pred["mapped_label"]
-        small_gap = gap <= 5  # Allow small gaps between consecutive entities
+def merge_consecutive_entities(entities, gap_threshold=5):
+    """
+    Merge consecutive entities of the same type that are close to each other.
+    This helps combine entities like 'June' and '1994' into 'June 1994'.
+    """
+    if not entities:
+        return entities
+    
+    # Sort entities by start position
+    sorted_entities = sorted(entities, key=lambda x: x['start'])
+    merged = []
+    
+    current_entity = sorted_entities[0].copy()
+    # Clean the text of the first entity
+    current_entity['text'] = clean_entity_text(current_entity['text'])
+    
+    for next_entity in sorted_entities[1:]:
+        # Clean the text of the next entity
+        next_entity_cleaned = next_entity.copy()
+        next_entity_cleaned['text'] = clean_entity_text(next_entity_cleaned['text'])
         
-        if same_label and small_gap:
-            # Extend the current entity to include the next one
-            current["end"] = next_pred["end"]
-            current["text"] += " " + next_pred["text"]
+        # Check if entities are of same type and close enough
+        if (current_entity['mapped_label'] == next_entity_cleaned['mapped_label'] and
+            next_entity_cleaned['start'] - current_entity['end'] <= gap_threshold):
             
-            # Keep track of original labels
-            if 'original_labels' not in current:
-                current['original_labels'] = [current['original_label']]
-            current['original_labels'].append(next_pred['original_label'])
+            # Merge the entities
+            text_between = next_entity_cleaned['text']
+            if current_entity['end'] < next_entity_cleaned['start']:
+                # Add the gap text between entities
+                gap_start = current_entity['end']
+                gap_end = next_entity_cleaned['start']
+                # For now, assume single space - in real implementation you'd extract from original text
+                gap_text = " " if gap_end - gap_start <= gap_threshold else " "
+                current_entity['text'] += gap_text + next_entity_cleaned['text']
+            else:
+                current_entity['text'] += next_entity_cleaned['text']
+            
+            current_entity['end'] = next_entity_cleaned['end']
+            current_entity['original_label'] = current_entity.get('original_label', current_entity['label'])
         else:
-            merged.append(next_pred.copy())
-            
+            # No merge, add current entity and start new one
+            merged.append(current_entity)
+            current_entity = next_entity_cleaned.copy()
+    
+    # Add the last entity
+    merged.append(current_entity)
+    
     return merged
 
 def calculate_iou(span1: Tuple[int, int], span2: Tuple[int, int]) -> float:
@@ -96,16 +154,15 @@ def calculate_iou(span1: Tuple[int, int], span2: Tuple[int, int]) -> float:
     
     return intersection / union
 
-def evaluate_document(predicted_entities: List[Dict], 
-                     ground_truth_entities: List[Dict], 
-                     text: str,
+def evaluate_single_document(predicted_entities: List[Dict], 
+                     gt_entities: List[Dict],
                      strict_threshold: float = 1.0,
                      relaxed_threshold: float = 0.5) -> Dict:
     """
     Evaluate a single document with improved matching logic based on Piranha approach.
     """
     
-    # Step 1: Apply label mapping to predicted entities
+    # Step 1: Apply label mapping and clean predicted entities
     mapped_predictions = []
     for entity in predicted_entities:
         original_label = entity['label']
@@ -113,6 +170,14 @@ def evaluate_document(predicted_entities: List[Dict],
         
         if mapped_label is not None:
             mapped_entity = entity.copy()
+            # Clean the predicted text
+            mapped_entity['text'] = clean_entity_text(entity['text'])
+            # Adjust end position based on cleaned text length
+            original_length = len(entity['text'])
+            cleaned_length = len(mapped_entity['text'])
+            if cleaned_length < original_length:
+                mapped_entity['end'] = mapped_entity['start'] + cleaned_length
+            
             mapped_entity['mapped_label'] = mapped_label
             mapped_entity['original_label'] = original_label
             mapped_predictions.append(mapped_entity)
@@ -120,13 +185,28 @@ def evaluate_document(predicted_entities: List[Dict],
     # Step 2: Merge consecutive entities of the same type (names, dates, etc.)
     merged_predictions = merge_consecutive_entities(mapped_predictions)
     
-    # Step 3: Filter ground truth
+    # Step 3: Filter ground truth to use only first annotator in document
+    if gt_entities:
+        # Get the first annotator found in this document
+        first_annotator = gt_entities[0].get('annotator', None)
+        if first_annotator:
+            gt_first_annotator = [
+                gt for gt in gt_entities 
+                if gt.get('annotator') == first_annotator
+            ]
+        else:
+            # Fallback if no annotator field
+            gt_first_annotator = gt_entities
+    else:
+        gt_first_annotator = []
+    
+    # Step 4: Filter by entity types we want to evaluate
     filtered_gt = [
-        gt for gt in ground_truth_entities 
+        gt for gt in gt_first_annotator 
         if gt['entity_type'] not in IGNORE_GT_LABELS
     ]
     
-    # Step 4: Initialize metrics
+    # Step 5: Initialize metrics
     metrics = {
         'total_predicted': len(merged_predictions),
         'total_ground_truth': len(filtered_gt),
@@ -145,18 +225,26 @@ def evaluate_document(predicted_entities: List[Dict],
     gt_matched = [False] * len(filtered_gt)
     pred_used = [False] * len(merged_predictions)
     
-    # Step 5: Find matches using improved logic (one-to-one matching)
+    # Step 6: Find matches using improved logic (one-to-one matching) with multi-GT support
     for pred_idx, pred in enumerate(merged_predictions):
-        best_match = None
-        best_iou = 0.0
-        best_gt_idx = None
+        best_matches = []  # Support matching multiple GT entities
+        best_total_iou = 0.0
+        best_gt_indices = []
         
+        # First try single GT entity matching
         for gt_idx, gt in enumerate(filtered_gt):
             if gt_matched[gt_idx]:  # Skip already matched GT entities
                 continue
             
-            # Check label match
-            if pred['mapped_label'] != gt['entity_type']:
+            # Check label match with special case: LOC can match ORG
+            pred_label = pred['mapped_label']
+            gt_label = gt['entity_type']
+            
+            # Allow LOC predictions to match ORG ground truth (locations can be organizations)
+            if pred_label == "LOC" and gt_label == "ORG":
+                # This is allowed - treat LOC prediction as valid for ORG ground truth
+                pass
+            elif pred_label != gt_label:
                 continue
             
             # Calculate IoU
@@ -181,18 +269,54 @@ def evaluate_document(predicted_entities: List[Dict],
             overlap_ratio = overlap / (pred['end'] - pred['start']) if pred['end'] > pred['start'] else 0
             
             # Accept match if any condition is met and it's better than previous best
-            if (pred_contained or overlap_ratio >= 0.5 or iou >= threshold) and iou > best_iou:
-                best_iou = iou
-                best_match = gt
-                best_gt_idx = gt_idx
+            if (pred_contained or overlap_ratio >= 0.5 or iou >= threshold) and iou > best_total_iou:
+                best_total_iou = iou
+                best_matches = [gt]
+                best_gt_indices = [gt_idx]
+        
+        # If no single match found, try to match against multiple consecutive GT entities
+        # This handles cases like "November 2000 January 2001" matching "November 2000" + "January 2001"
+        if not best_matches and pred['mapped_label'] == "DATETIME":
+            for start_gt_idx, start_gt in enumerate(filtered_gt):
+                if gt_matched[start_gt_idx] or start_gt['entity_type'] != "DATETIME":
+                    continue
+                
+                # Look for consecutive DATETIME entities that together might match the prediction
+                consecutive_gts = [start_gt]
+                consecutive_indices = [start_gt_idx]
+                
+                for next_gt_idx in range(start_gt_idx + 1, len(filtered_gt)):
+                    next_gt = filtered_gt[next_gt_idx]
+                    if (gt_matched[next_gt_idx] or next_gt['entity_type'] != "DATETIME" or
+                        next_gt['start_offset'] - consecutive_gts[-1]['end_offset'] > 50):  # Max gap between dates
+                        break
+                    consecutive_gts.append(next_gt)
+                    consecutive_indices.append(next_gt_idx)
+                
+                if len(consecutive_gts) >= 2:  # Only try if we have multiple dates
+                    # Calculate combined span
+                    combined_start = consecutive_gts[0]['start_offset']
+                    combined_end = consecutive_gts[-1]['end_offset']
+                    combined_span = (combined_start, combined_end)
+                    
+                    # Calculate IoU with the merged prediction
+                    pred_span = (pred['start'], pred['end'])
+                    combined_iou = calculate_iou(pred_span, combined_span)
+                    
+                    # Check if this is a better match than single entities
+                    if combined_iou > best_total_iou and combined_iou >= 0.3:
+                        best_total_iou = combined_iou
+                        best_matches = consecutive_gts
+                        best_gt_indices = consecutive_indices
         
         # Record match if found (only the best match per prediction)
-        if best_match and best_iou >= 0.3:  # Minimum IoU to prevent very weak matches
+        if best_matches and best_total_iou >= 0.3:  # Minimum IoU to prevent very weak matches
             pred_used[pred_idx] = True
-            gt_matched[best_gt_idx] = True  # Mark GT as matched
+            for gt_idx in best_gt_indices:
+                gt_matched[gt_idx] = True  # Mark all matched GTs as used
             
             # Determine match type
-            if best_iou >= strict_threshold:
+            if best_total_iou >= strict_threshold:
                 metrics['strict_matches'] += 1
                 metrics['tp_strict'] += 1
                 match_type = 'strict'
@@ -202,14 +326,22 @@ def evaluate_document(predicted_entities: List[Dict],
             metrics['relaxed_matches'] += 1
             metrics['tp_relaxed'] += 1
             
+            # For display purposes, use the first GT or create a combined representation
+            display_gt = best_matches[0] if len(best_matches) == 1 else {
+                'start_offset': best_matches[0]['start_offset'],
+                'end_offset': best_matches[-1]['end_offset'],
+                'entity_type': best_matches[0]['entity_type'],
+                'span_text': ' '.join([gt['span_text'] for gt in best_matches])
+            }
+            
             metrics['matched_pairs'].append({
                 'prediction': pred,
-                'ground_truth': best_match,
-                'iou': best_iou,
+                'ground_truth': display_gt,
+                'iou': best_total_iou,
                 'match_type': match_type
             })
     
-    # Step 6: Count false positives and false negatives
+    # Step 7: Count false positives and false negatives
     for pred_idx, pred in enumerate(merged_predictions):
         if not pred_used[pred_idx] and pred['original_label'] not in IGNORE_FP_LABELS:
             metrics['fp'] += 1
@@ -290,10 +422,9 @@ def main():
         if i % 50 == 0:
             print(f"Evaluating document {i+1}/{len(results)}")
         
-        doc_metrics = evaluate_document(
+        doc_metrics = evaluate_single_document(
             doc['ai4privacy_detected_pii'],
-            doc['ground_truth_entities'],
-            doc['original_text']
+            doc['ground_truth_entities']
         )
         
         doc_metrics['doc_id'] = doc['id']

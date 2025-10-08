@@ -71,7 +71,8 @@ def main():
                     'entity_type': annotation['entity_type'],
                     'start_offset': annotation['start_offset'],
                     'end_offset': annotation['end_offset'],
-                    'span_text': annotation['span_text']
+                    'span_text': annotation['span_text'],
+                    'annotator': annotation.get('annotator', 'unknown')
                 })
             
             # Process with AI4Privacy
