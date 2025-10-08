@@ -1,0 +1,10 @@
+{
+  "true_positives": {},
+  "false_positives": {},
+  "false_negatives": {},
+  "summary": {
+    "total_fps": 0,
+    "total_fns": 0,
+    "total_tps": 0
+  }
+}

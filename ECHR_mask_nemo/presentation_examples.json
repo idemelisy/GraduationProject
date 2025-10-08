@@ -1,0 +1,3914 @@
+{
+  "true_positives": {
+    "PERSON": [
+      {
+        "doc_id": "doc_0",
+        "predicted": "Mr Henrik Hasslund",
+        "ground_truth": "Mr Henrik Hasslund",
+        "pred_pos": "253-271",
+        "gt_pos": "253-271"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "Mr Tyge Trier",
+        "ground_truth": "Mr Tyge Trier",
+        "pred_pos": "344-357",
+        "gt_pos": "344-357"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "Mr Nusret Amutgan",
+        "ground_truth": "Mr Nusret Amutgan",
+        "pred_pos": "253-270",
+        "gt_pos": "253-270"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "Mr Mustafa",
+        "ground_truth": "Mr Mustafa Sar\u0131",
+        "pred_pos": "310-320",
+        "gt_pos": "310-325"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "Ms Sibel",
+        "ground_truth": "Ms Sibel \u00c7olak",
+        "pred_pos": "330-338",
+        "gt_pos": "330-344"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "Mr Dariusz Karwowski",
+        "ground_truth": "Mr Dariusz Karwowski",
+        "pred_pos": "253-273",
+        "gt_pos": "253-273"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "Mr Artur",
+        "ground_truth": "Mr Artur Warsi\u0144ski",
+        "pred_pos": "253-261",
+        "gt_pos": "253-271"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "Mr Artur",
+        "ground_truth": "Mr Artur Warsi\u0144ski",
+        "pred_pos": "912-920",
+        "gt_pos": "912-930"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "Mr Kazimierz",
+        "ground_truth": "Mr Kazimierz Gni\u0142ka",
+        "pred_pos": "356-368",
+        "gt_pos": "356-375"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "Mr Veli",
+        "ground_truth": "Mr Veli Ate\u015f",
+        "pred_pos": "273-280",
+        "gt_pos": "273-285"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "Mr Ellez Duman",
+        "ground_truth": "Mr Ellez Duman",
+        "pred_pos": "306-320",
+        "gt_pos": "306-320"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "Mr Bekir Arslan",
+        "ground_truth": "Mr Bekir Arslan",
+        "pred_pos": "381-396",
+        "gt_pos": "381-396"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "Mr Fevzi",
+        "ground_truth": "Mr Fevzi G\u00fcm\u00fc\u015f",
+        "pred_pos": "471-479",
+        "gt_pos": "471-485"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "Kenan Atakul",
+        "ground_truth": "Kenan Atakul",
+        "pred_pos": "3753-3765",
+        "gt_pos": "3753-3765"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "Ellez Duman",
+        "ground_truth": "Ellez Duman",
+        "pred_pos": "3822-3833",
+        "gt_pos": "3822-3833"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "Mr Semir",
+        "ground_truth": "Mr Semir G\u00fczel",
+        "pred_pos": "254-262",
+        "gt_pos": "254-268"
+      }
+    ],
+    "DATETIME": [
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 31 August 2006",
+        "ground_truth": "31 August 2006",
+        "pred_pos": "291-308",
+        "gt_pos": "294-308"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "On 5 September 2007",
+        "ground_truth": "5 September 2007",
+        "pred_pos": "523-542",
+        "gt_pos": "526-542"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "in 1973",
+        "ground_truth": "1973",
+        "pred_pos": "826-833",
+        "gt_pos": "829-833"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "the beginning of the 1990s",
+        "ground_truth": "1990s",
+        "pred_pos": "882-908",
+        "gt_pos": "903-908"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "from the late 1980s",
+        "ground_truth": "late 1980s until 1994",
+        "pred_pos": "1709-1728",
+        "gt_pos": "1718-1739"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "until 1994",
+        "ground_truth": "1994",
+        "pred_pos": "1729-1739",
+        "gt_pos": "1735-1739"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "the summer of 1993",
+        "ground_truth": "summer of 1993",
+        "pred_pos": "1846-1864",
+        "gt_pos": "1850-1864"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "In 1994",
+        "ground_truth": "1994",
+        "pred_pos": "1867-1874",
+        "gt_pos": "1870-1874"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "9 June 1994",
+        "ground_truth": "9 June 1994",
+        "pred_pos": "2053-2064",
+        "gt_pos": "2053-2064"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "14 June 1994",
+        "ground_truth": "14 June 1994",
+        "pred_pos": "2154-2166",
+        "gt_pos": "2154-2166"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "1994",
+        "ground_truth": "November 1994 to September 1995",
+        "pred_pos": "2323-2327",
+        "gt_pos": "2314-2345"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "September 1995",
+        "ground_truth": "September 1995",
+        "pred_pos": "2331-2345",
+        "gt_pos": "2331-2345"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "On 19 September 1995",
+        "ground_truth": "19 September 1995",
+        "pred_pos": "2468-2488",
+        "gt_pos": "2471-2488"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 22 December 1995",
+        "ground_truth": "22 December 1995",
+        "pred_pos": "2691-2710",
+        "gt_pos": "2694-2710"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "the beginning of 1996",
+        "ground_truth": "beginning of 1996",
+        "pred_pos": "2960-2981",
+        "gt_pos": "2964-2981"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "1996",
+        "ground_truth": "January 1996 to June 1998",
+        "pred_pos": "2997-3001",
+        "gt_pos": "2989-3014"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "June 1998",
+        "ground_truth": "January 1996 to June 1998",
+        "pred_pos": "3005-3014",
+        "gt_pos": "2989-3014"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 19 March 1997",
+        "ground_truth": "19 March 1997",
+        "pred_pos": "3361-3377",
+        "gt_pos": "3364-3377"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "On 25 June 1998",
+        "ground_truth": "25 June 1998",
+        "pred_pos": "3529-3544",
+        "gt_pos": "3532-3544"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "March 1992",
+        "ground_truth": "March 1992 and May 1993",
+        "pred_pos": "3816-3826",
+        "gt_pos": "3816-3839"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "May 1993",
+        "ground_truth": "May 1993",
+        "pred_pos": "3831-3839",
+        "gt_pos": "3831-3839"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "14 August 1998",
+        "ground_truth": "14 August 1998 and 10 March 1999",
+        "pred_pos": "4039-4053",
+        "gt_pos": "4039-4071"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "10 March 1999",
+        "ground_truth": "10 March 1999",
+        "pred_pos": "4058-4071",
+        "gt_pos": "4058-4071"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 15 March 1999",
+        "ground_truth": "15 March 1999",
+        "pred_pos": "4219-4235",
+        "gt_pos": "4222-4235"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "15 March 1999",
+        "ground_truth": "15 March 1999 and 31 January 2001",
+        "pred_pos": "4246-4259",
+        "gt_pos": "4246-4279"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "31 January 2001",
+        "ground_truth": "31 January 2001",
+        "pred_pos": "4264-4279",
+        "gt_pos": "4264-4279"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "November 2000",
+        "ground_truth": "November 2000",
+        "pred_pos": "4630-4643",
+        "gt_pos": "4630-4643"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "January 2001",
+        "ground_truth": "January 2001",
+        "pred_pos": "4648-4660",
+        "gt_pos": "4648-4660"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "6 April 2001",
+        "ground_truth": "6 April 2001",
+        "pred_pos": "4680-4692",
+        "gt_pos": "4680-4692"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "On 15 May 2001",
+        "ground_truth": "15 May 2001",
+        "pred_pos": "6693-6707",
+        "gt_pos": "6696-6707"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 13 September 2001",
+        "ground_truth": "13 September 2001",
+        "pred_pos": "6921-6941",
+        "gt_pos": "6924-6941"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 24 September 2002",
+        "ground_truth": "24 September 2002",
+        "pred_pos": "7017-7037",
+        "gt_pos": "7020-7037"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "the autumn of 2002",
+        "ground_truth": "autumn of 2002",
+        "pred_pos": "7166-7184",
+        "gt_pos": "7170-7184"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 24 September 2002",
+        "ground_truth": "24 September 2002",
+        "pred_pos": "7222-7242",
+        "gt_pos": "7225-7242"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "in 2003",
+        "ground_truth": "2003",
+        "pred_pos": "7276-7283",
+        "gt_pos": "7279-7283"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "2004",
+        "ground_truth": "2004",
+        "pred_pos": "7288-7292",
+        "gt_pos": "7288-7292"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "March 2004",
+        "ground_truth": "March 2004",
+        "pred_pos": "7362-7372",
+        "gt_pos": "7362-7372"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "June 2004",
+        "ground_truth": "April, May, and June 2004",
+        "pred_pos": "7626-7635",
+        "gt_pos": "7610-7635"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "On 28 September 2004",
+        "ground_truth": "28 September 2004",
+        "pred_pos": "7638-7658",
+        "gt_pos": "7641-7658"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 19 September 1995",
+        "ground_truth": "19 September 1995",
+        "pred_pos": "7907-7927",
+        "gt_pos": "7910-7927"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "On 13 September 2001",
+        "ground_truth": "13 September 2001",
+        "pred_pos": "8197-8217",
+        "gt_pos": "8200-8217"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "12 August 2002",
+        "ground_truth": "12 August 2002",
+        "pred_pos": "8279-8293",
+        "gt_pos": "8279-8293"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "2002",
+        "ground_truth": "autumn 2002",
+        "pred_pos": "8335-8339",
+        "gt_pos": "8328-8339"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "the beginning of 2003",
+        "ground_truth": "beginning of 2003",
+        "pred_pos": "8344-8365",
+        "gt_pos": "8348-8365"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 24 September 2002",
+        "ground_truth": "24 September 2002",
+        "pred_pos": "8581-8601",
+        "gt_pos": "8584-8601"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "12 October 2004",
+        "ground_truth": "7 to 12 October 2004",
+        "pred_pos": "8687-8702",
+        "gt_pos": "8682-8702"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 17 December 2004",
+        "ground_truth": "17 December 2004",
+        "pred_pos": "8985-9004",
+        "gt_pos": "8988-9004"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "2005",
+        "ground_truth": "January 2005",
+        "pred_pos": "9017-9021",
+        "gt_pos": "9009-9021"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 29 March 2005",
+        "ground_truth": "29 March 2005",
+        "pred_pos": "9085-9101",
+        "gt_pos": "9088-9101"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 5 August 2005",
+        "ground_truth": "5 August 2005",
+        "pred_pos": "9185-9201",
+        "gt_pos": "9188-9201"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 9 August 2005",
+        "ground_truth": "9 August 2005",
+        "pred_pos": "9310-9326",
+        "gt_pos": "9313-9326"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "2 May 2006",
+        "ground_truth": "2 May 2006",
+        "pred_pos": "9537-9547",
+        "gt_pos": "9537-9547"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "13 June 2006",
+        "ground_truth": "2 and 13 June 2006",
+        "pred_pos": "9766-9778",
+        "gt_pos": "9760-9778"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "on 21 June 2006",
+        "ground_truth": "21 June 2006",
+        "pred_pos": "9829-9844",
+        "gt_pos": "9832-9844"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "on 25 July 2003",
+        "ground_truth": "25 July 2003",
+        "pred_pos": "249-264",
+        "gt_pos": "252-264"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "On 5 January 2007",
+        "ground_truth": "5 January 2007",
+        "pred_pos": "396-413",
+        "gt_pos": "399-413"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "in 1964",
+        "ground_truth": "1964",
+        "pred_pos": "733-740",
+        "gt_pos": "736-740"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "On 21 October 2002",
+        "ground_truth": "21 October 2002",
+        "pred_pos": "792-810",
+        "gt_pos": "795-810"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "24 October 2002",
+        "ground_truth": "24 October 2002",
+        "pred_pos": "856-871",
+        "gt_pos": "856-871"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "7 October 2003",
+        "ground_truth": "7 October 2003",
+        "pred_pos": "1259-1273",
+        "gt_pos": "1259-1273"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "7 March 2004",
+        "ground_truth": "7 March 2004",
+        "pred_pos": "1278-1290",
+        "gt_pos": "1278-1290"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "15 October 2003",
+        "ground_truth": "15 October 2003",
+        "pred_pos": "1313-1328",
+        "gt_pos": "1313-1328"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "19 July 2004",
+        "ground_truth": "19 July 2004",
+        "pred_pos": "1345-1357",
+        "gt_pos": "1345-1357"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "15 December 2002",
+        "ground_truth": "15 December 2002",
+        "pred_pos": "2209-2225",
+        "gt_pos": "2209-2225"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "21 November 2003",
+        "ground_truth": "21 November 2003",
+        "pred_pos": "2291-2307",
+        "gt_pos": "2291-2307"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "On 30 September 2003",
+        "ground_truth": "30 September 2003",
+        "pred_pos": "2372-2392",
+        "gt_pos": "2375-2392"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "On 11 December 2003",
+        "ground_truth": "11 December 2003",
+        "pred_pos": "2549-2568",
+        "gt_pos": "2552-2568"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "25 October 2004",
+        "ground_truth": "25 October 2004",
+        "pred_pos": "2806-2821",
+        "gt_pos": "2806-2821"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "on 15 January 2004",
+        "ground_truth": "15 January 2004",
+        "pred_pos": "3006-3024",
+        "gt_pos": "3009-3024"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "30 March 2004",
+        "ground_truth": "30 March 2004",
+        "pred_pos": "3029-3042",
+        "gt_pos": "3029-3042"
+      },
+      {
+        "doc_id": "doc_1",
+        "predicted": "9 April 2004",
+        "ground_truth": "9 April 2004",
+        "pred_pos": "3385-3397",
+        "gt_pos": "3385-3397"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "on 29 December 2003",
+        "ground_truth": "29 December 2003",
+        "pred_pos": "290-309",
+        "gt_pos": "293-309"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "On 4 January 2008",
+        "ground_truth": "4 January 2008",
+        "pred_pos": "469-486",
+        "gt_pos": "472-486"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "in 1970",
+        "ground_truth": "1970",
+        "pred_pos": "867-874",
+        "gt_pos": "870-874"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "On 27 April 1998",
+        "ground_truth": "27 April 1998",
+        "pred_pos": "943-959",
+        "gt_pos": "946-959"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "on 13 February 1995",
+        "ground_truth": "13 February 1995",
+        "pred_pos": "1416-1435",
+        "gt_pos": "1419-1435"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "On 6 May 1998",
+        "ground_truth": "6 May 1998",
+        "pred_pos": "1511-1524",
+        "gt_pos": "1514-1524"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "On 15 June 1998",
+        "ground_truth": "15 June 1998",
+        "pred_pos": "1976-1991",
+        "gt_pos": "1979-1991"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "on 20 August 1998",
+        "ground_truth": "20 August 1998",
+        "pred_pos": "2354-2371",
+        "gt_pos": "2357-2371"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "in 1995",
+        "ground_truth": "1995",
+        "pred_pos": "2538-2545",
+        "gt_pos": "2541-2545"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "On 28 November 2002",
+        "ground_truth": "28 November 2002",
+        "pred_pos": "2794-2813",
+        "gt_pos": "2797-2813"
+      },
+      {
+        "doc_id": "doc_2",
+        "predicted": "On 16 September 2003",
+        "ground_truth": "16 September 2003",
+        "pred_pos": "3273-3293",
+        "gt_pos": "3276-3293"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "on 3 April 1998",
+        "ground_truth": "3 April 1998",
+        "pred_pos": "365-380",
+        "gt_pos": "368-380"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "On 1 February 2000",
+        "ground_truth": "1 February 2000",
+        "pred_pos": "602-620",
+        "gt_pos": "605-620"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "in 1973",
+        "ground_truth": "1973",
+        "pred_pos": "1418-1425",
+        "gt_pos": "1421-1425"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "1977",
+        "ground_truth": "1977",
+        "pred_pos": "1430-1434",
+        "gt_pos": "1430-1434"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "On 17 November 1997",
+        "ground_truth": "17 November 1997",
+        "pred_pos": "1493-1512",
+        "gt_pos": "1496-1512"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "21 November 1997",
+        "ground_truth": "21 November 1997",
+        "pred_pos": "1951-1967",
+        "gt_pos": "1951-1967"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "23 November 1997",
+        "ground_truth": "23 November 1997",
+        "pred_pos": "2077-2093",
+        "gt_pos": "2077-2093"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "on 23 November 1997",
+        "ground_truth": "23 November 1997",
+        "pred_pos": "2189-2208",
+        "gt_pos": "2192-2208"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "on 24 November 1997",
+        "ground_truth": "24 November 1997",
+        "pred_pos": "2362-2381",
+        "gt_pos": "2365-2381"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "8 December 1997",
+        "ground_truth": "8 December 1997",
+        "pred_pos": "2522-2537",
+        "gt_pos": "2522-2537"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "on 9 June 1998",
+        "ground_truth": "9 June 1998",
+        "pred_pos": "2777-2791",
+        "gt_pos": "2780-2791"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "22 April 1999",
+        "ground_truth": "22 April 1999",
+        "pred_pos": "2873-2886",
+        "gt_pos": "2873-2886"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "23 February 2000",
+        "ground_truth": "23 February 2000",
+        "pred_pos": "3289-3305",
+        "gt_pos": "3289-3305"
+      },
+      {
+        "doc_id": "doc_3",
+        "predicted": "7 November 2001",
+        "ground_truth": "7 November 2001",
+        "pred_pos": "3456-3471",
+        "gt_pos": "3456-3471"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "on 19 March 2013",
+        "ground_truth": "19 March 2013",
+        "pred_pos": "293-309",
+        "gt_pos": "296-309"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "On 7 July 2014",
+        "ground_truth": "7 July 2014",
+        "pred_pos": "656-670",
+        "gt_pos": "659-670"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "in 1971",
+        "ground_truth": "1971",
+        "pred_pos": "933-940",
+        "gt_pos": "936-940"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "On 17 January 2006",
+        "ground_truth": "17 January 2006",
+        "pred_pos": "1030-1048",
+        "gt_pos": "1033-1048"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "on 27 February 2013",
+        "ground_truth": "27 February 2013",
+        "pred_pos": "1346-1365",
+        "gt_pos": "1349-1365"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "On 19 January 2006",
+        "ground_truth": "19 January 2006",
+        "pred_pos": "1468-1486",
+        "gt_pos": "1471-1486"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "3 January 2013",
+        "ground_truth": "3 January 2013",
+        "pred_pos": "2940-2954",
+        "gt_pos": "2940-2954"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "On 30 January 2013",
+        "ground_truth": "30 January 2013",
+        "pred_pos": "3300-3318",
+        "gt_pos": "3303-3318"
+      },
+      {
+        "doc_id": "doc_4",
+        "predicted": "On 21 November 2013",
+        "ground_truth": "21 November 2013",
+        "pred_pos": "3418-3437",
+        "gt_pos": "3421-3437"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "on 24 August 1998",
+        "ground_truth": "24 August 1998",
+        "pred_pos": "347-364",
+        "gt_pos": "350-364"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "On 29 January 2002",
+        "ground_truth": "29 January 2002",
+        "pred_pos": "588-606",
+        "gt_pos": "591-606"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "in 1961",
+        "ground_truth": "1961",
+        "pred_pos": "1013-1020",
+        "gt_pos": "1016-1020"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "On 23 May 1995",
+        "ground_truth": "23 May 1995",
+        "pred_pos": "1043-1057",
+        "gt_pos": "1046-1057"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "On 28 May 1995",
+        "ground_truth": "28 May 1995",
+        "pred_pos": "1541-1555",
+        "gt_pos": "1544-1555"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "On 27 June 1995",
+        "ground_truth": "27 June 1995",
+        "pred_pos": "1635-1650",
+        "gt_pos": "1638-1650"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "On 18 April 1996",
+        "ground_truth": "18 April 1996",
+        "pred_pos": "1827-1843",
+        "gt_pos": "1830-1843"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "On 13 October 1997",
+        "ground_truth": "13 October 1997",
+        "pred_pos": "2045-2063",
+        "gt_pos": "2048-2063"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "On 2 February 1998",
+        "ground_truth": "2 February 1998",
+        "pred_pos": "2089-2107",
+        "gt_pos": "2092-2107"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "On 26 February 1998",
+        "ground_truth": "26 February 1998",
+        "pred_pos": "2352-2371",
+        "gt_pos": "2355-2371"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "23 June 2005",
+        "ground_truth": "23 June 2005",
+        "pred_pos": "2499-2511",
+        "gt_pos": "2499-2511"
+      },
+      {
+        "doc_id": "doc_5",
+        "predicted": "on 5 October 2004",
+        "ground_truth": "5 October 2004",
+        "pred_pos": "2626-2643",
+        "gt_pos": "2629-2643"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "on 3 October 2002",
+        "ground_truth": "3 October 2002",
+        "pred_pos": "291-308",
+        "gt_pos": "294-308"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "On 29 November 2006",
+        "ground_truth": "29 November 2006",
+        "pred_pos": "440-459",
+        "gt_pos": "443-459"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "in 1976",
+        "ground_truth": "1976",
+        "pred_pos": "966-973",
+        "gt_pos": "969-973"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "6 April 2002",
+        "ground_truth": "6 April 2002",
+        "pred_pos": "1071-1083",
+        "gt_pos": "1071-1083"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "21 May 2004",
+        "ground_truth": "21 May 2004",
+        "pred_pos": "1087-1098",
+        "gt_pos": "1087-1098"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "On 28 May 2003",
+        "ground_truth": "28 May 2003",
+        "pred_pos": "1149-1163",
+        "gt_pos": "1152-1163"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "On 30 December 2003",
+        "ground_truth": "30 December 2003",
+        "pred_pos": "1310-1329",
+        "gt_pos": "1313-1329"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "On 3 October 2002",
+        "ground_truth": "3 October 2002",
+        "pred_pos": "1527-1544",
+        "gt_pos": "1530-1544"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "on 21 October 2002",
+        "ground_truth": "21 October 2002",
+        "pred_pos": "1641-1659",
+        "gt_pos": "1644-1659"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "On 4 December 2002",
+        "ground_truth": "4 December 2002",
+        "pred_pos": "1838-1856",
+        "gt_pos": "1841-1856"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "on 17 December 2002",
+        "ground_truth": "17 December 2002",
+        "pred_pos": "1959-1978",
+        "gt_pos": "1962-1978"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "on 24 October 2002",
+        "ground_truth": "24 October 2002",
+        "pred_pos": "2286-2304",
+        "gt_pos": "2289-2304"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "31 October 2002",
+        "ground_truth": "31 October 2002",
+        "pred_pos": "2371-2386",
+        "gt_pos": "2371-2386"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "on 22 November 2002",
+        "ground_truth": "22 November 2002",
+        "pred_pos": "2623-2642",
+        "gt_pos": "2626-2642"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "28 November 2002",
+        "ground_truth": "28 November 2002",
+        "pred_pos": "2720-2736",
+        "gt_pos": "2720-2736"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "25 November 2002",
+        "ground_truth": "25 November 2002",
+        "pred_pos": "2854-2870",
+        "gt_pos": "2854-2870"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "on 28 November 2002",
+        "ground_truth": "28 November 2002",
+        "pred_pos": "2986-3005",
+        "gt_pos": "2989-3005"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "2 December 2002",
+        "ground_truth": "2 December 2002",
+        "pred_pos": "3225-3240",
+        "gt_pos": "3225-3240"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "On 12 June 2003",
+        "ground_truth": "12 June 2003",
+        "pred_pos": "3285-3300",
+        "gt_pos": "3288-3300"
+      },
+      {
+        "doc_id": "doc_6",
+        "predicted": "On 30 June 2003",
+        "ground_truth": "30 June 2003",
+        "pred_pos": "3422-3437",
+        "gt_pos": "3425-3437"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "on 15 September 2000",
+        "ground_truth": "15 September 2000",
+        "pred_pos": "401-421",
+        "gt_pos": "404-421"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 16 June 2003",
+        "ground_truth": "16 June 2003",
+        "pred_pos": "588-603",
+        "gt_pos": "591-603"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "in 1946",
+        "ground_truth": "1946",
+        "pred_pos": "873-880",
+        "gt_pos": "876-880"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "1959",
+        "ground_truth": "1959",
+        "pred_pos": "885-889",
+        "gt_pos": "885-889"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "in 1952",
+        "ground_truth": "1952",
+        "pred_pos": "963-970",
+        "gt_pos": "966-970"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 17 March 1989",
+        "ground_truth": "17 March 1989",
+        "pred_pos": "996-1012",
+        "gt_pos": "999-1012"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 17 November 1989",
+        "ground_truth": "17 November 1989",
+        "pred_pos": "1163-1182",
+        "gt_pos": "1166-1182"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 7 March 1991",
+        "ground_truth": "7 March 1991",
+        "pred_pos": "1281-1296",
+        "gt_pos": "1284-1296"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 7 June 1993",
+        "ground_truth": "7 June 1993",
+        "pred_pos": "1386-1400",
+        "gt_pos": "1389-1400"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "16 September 1993",
+        "ground_truth": "16 September 1993",
+        "pred_pos": "1495-1512",
+        "gt_pos": "1495-1512"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "28 June 1994",
+        "ground_truth": "28 June 1994",
+        "pred_pos": "1514-1526",
+        "gt_pos": "1514-1526"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "28 July 1994",
+        "ground_truth": "28 July 1994",
+        "pred_pos": "1531-1543",
+        "gt_pos": "1531-1543"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 11 August 1994",
+        "ground_truth": "11 August 1994",
+        "pred_pos": "1546-1563",
+        "gt_pos": "1549-1563"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 24 March 1995",
+        "ground_truth": "24 March 1995",
+        "pred_pos": "1662-1678",
+        "gt_pos": "1665-1678"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "10 December 1996",
+        "ground_truth": "10 December 1996",
+        "pred_pos": "1843-1859",
+        "gt_pos": "1843-1859"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "3 June 1997",
+        "ground_truth": "3 June 1997",
+        "pred_pos": "1864-1875",
+        "gt_pos": "1864-1875"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 11 June 1997",
+        "ground_truth": "11 June 1997",
+        "pred_pos": "1911-1926",
+        "gt_pos": "1914-1926"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 17 December 1997",
+        "ground_truth": "17 December 1997",
+        "pred_pos": "2008-2027",
+        "gt_pos": "2011-2027"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 11 February 1999",
+        "ground_truth": "11 February 1999",
+        "pred_pos": "2185-2204",
+        "gt_pos": "2188-2204"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 2 September 1999",
+        "ground_truth": "2 September 1999",
+        "pred_pos": "2293-2312",
+        "gt_pos": "2296-2312"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "On 16 March 2000",
+        "ground_truth": "16 March 2000",
+        "pred_pos": "2394-2410",
+        "gt_pos": "2397-2410"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "2 September 1999",
+        "ground_truth": "2 September 1999",
+        "pred_pos": "2491-2507",
+        "gt_pos": "2491-2507"
+      },
+      {
+        "doc_id": "doc_7",
+        "predicted": "on 20 March 2000",
+        "ground_truth": "20 March 2000",
+        "pred_pos": "2604-2620",
+        "gt_pos": "2607-2620"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "on 22 April 2002",
+        "ground_truth": "22 April 2002",
+        "pred_pos": "417-433",
+        "gt_pos": "420-433"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "On 13 June 2006",
+        "ground_truth": "13 June 2006",
+        "pred_pos": "642-657",
+        "gt_pos": "645-657"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "in 1954",
+        "ground_truth": "1954",
+        "pred_pos": "1071-1078",
+        "gt_pos": "1074-1078"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "1957",
+        "ground_truth": "1957",
+        "pred_pos": "1080-1084",
+        "gt_pos": "1080-1084"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "1961",
+        "ground_truth": "1961",
+        "pred_pos": "1086-1090",
+        "gt_pos": "1086-1090"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "1965",
+        "ground_truth": "1965",
+        "pred_pos": "1092-1096",
+        "gt_pos": "1092-1096"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "1960",
+        "ground_truth": "1960",
+        "pred_pos": "1098-1102",
+        "gt_pos": "1098-1102"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "1956",
+        "ground_truth": "1956",
+        "pred_pos": "1104-1108",
+        "gt_pos": "1104-1108"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "1959",
+        "ground_truth": "1959",
+        "pred_pos": "1110-1114",
+        "gt_pos": "1110-1114"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "1964",
+        "ground_truth": "1964",
+        "pred_pos": "1116-1120",
+        "gt_pos": "1116-1120"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "1958",
+        "ground_truth": "1958",
+        "pred_pos": "1125-1129",
+        "gt_pos": "1125-1129"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "On 15 November 2000",
+        "ground_truth": "15 November 2000",
+        "pred_pos": "1374-1393",
+        "gt_pos": "1377-1393"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "On 21 November 2000",
+        "ground_truth": "21 November 2000",
+        "pred_pos": "1794-1813",
+        "gt_pos": "1797-1813"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "On 15 January 2001",
+        "ground_truth": "15 January 2001",
+        "pred_pos": "2283-2301",
+        "gt_pos": "2286-2301"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "on 17 April 2001",
+        "ground_truth": "17 April 2001",
+        "pred_pos": "2472-2488",
+        "gt_pos": "2475-2488"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "On 11 September 2001",
+        "ground_truth": "11 September 2001",
+        "pred_pos": "2912-2932",
+        "gt_pos": "2915-2932"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "22 October 2001",
+        "ground_truth": "8, 9, 12 and 22 October 2001",
+        "pred_pos": "3179-3194",
+        "gt_pos": "3166-3194"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "11 September 2001",
+        "ground_truth": "11 September 2001",
+        "pred_pos": "3252-3269",
+        "gt_pos": "3252-3269"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "11 October 2001",
+        "ground_truth": "11 October 2001",
+        "pred_pos": "3579-3594",
+        "gt_pos": "3579-3594"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "15 October 2001",
+        "ground_truth": "15 October 2001",
+        "pred_pos": "3676-3691",
+        "gt_pos": "3676-3691"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "22 October 2001",
+        "ground_truth": "22 October 2001",
+        "pred_pos": "3723-3738",
+        "gt_pos": "3723-3738"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "30 October 2001",
+        "ground_truth": "30 October 2001",
+        "pred_pos": "3792-3807",
+        "gt_pos": "3792-3807"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "on 6 May 2009",
+        "ground_truth": "6 May 2009",
+        "pred_pos": "288-301",
+        "gt_pos": "291-301"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "On 7 January 2014",
+        "ground_truth": "7 January 2014",
+        "pred_pos": "484-501",
+        "gt_pos": "487-501"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "in 1968",
+        "ground_truth": "1968",
+        "pred_pos": "830-837",
+        "gt_pos": "833-837"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "On 4 January 2004",
+        "ground_truth": "4 January 2004",
+        "pred_pos": "1013-1030",
+        "gt_pos": "1016-1030"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "On 28 February 2005",
+        "ground_truth": "28 February 2005",
+        "pred_pos": "1185-1204",
+        "gt_pos": "1188-1204"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "On 7 December 2005",
+        "ground_truth": "7 December 2005",
+        "pred_pos": "2505-2523",
+        "gt_pos": "2508-2523"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "On 14 February 2007",
+        "ground_truth": "14 February 2007",
+        "pred_pos": "2759-2778",
+        "gt_pos": "2762-2778"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "On 23 March 2011",
+        "ground_truth": "23 March 2011",
+        "pred_pos": "3172-3188",
+        "gt_pos": "3175-3188"
+      },
+      {
+        "doc_id": "doc_9",
+        "predicted": "On 6 December 2011",
+        "ground_truth": "6 December 2011",
+        "pred_pos": "3496-3514",
+        "gt_pos": "3499-3514"
+      }
+    ],
+    "LOC": [
+      {
+        "doc_id": "doc_0",
+        "predicted": "Copenhagen",
+        "ground_truth": "Copenhagen",
+        "pred_pos": "382-392",
+        "gt_pos": "382-392"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "Les Salles Sur Verdon, France",
+        "ground_truth": "Les Salles Sur Verdon, France",
+        "pred_pos": "847-876",
+        "gt_pos": "847-876"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "Denmark",
+        "ground_truth": "Denmark",
+        "pred_pos": "1003-1010",
+        "gt_pos": "1003-1010"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "Denmark, Switzerland",
+        "ground_truth": "Denmark",
+        "pred_pos": "3128-3148",
+        "gt_pos": "3128-3135"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "Sweden",
+        "ground_truth": "Sweden",
+        "pred_pos": "3153-3159",
+        "gt_pos": "3153-3159"
+      },
+      {
+        "doc_id": "doc_0",
+        "predicted": "Denmark",
+        "ground_truth": "Denmark",
+        "pred_pos": "3184-3191",
+        "gt_pos": "3184-3191"
+      },
+      {
+        "doc_id": "doc_8",
+        "predicted": "Ankara, Izmir",
+        "ground_truth": "Ankara",
+        "pred_pos": "1152-1165",
+        "gt_pos": "1152-1158"
+      }
+    ]
+  },
+  "false_positives": {
+    "LOC": [
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "87-94"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Agent, Ms",
+        "position": "461-470"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Copenhagen",
+        "position": "2771-2781"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "April, May",
+        "position": "7610-7620"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "Agent, Mr",
+        "position": "334-343"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Agent, Ms",
+        "position": "379-388"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Agent, Mr",
+        "position": "378-387"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Agents, Mr",
+        "position": "490-500"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Erseven, Mr",
+        "position": "244-255"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Kaya, Mr",
+        "position": "332-340"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Kenan Atakul, Mr",
+        "position": "341-357"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Erseven, Bekir",
+        "position": "3616-3630"
+      }
+    ],
+    "PERSON": [
+      {
+        "doc_id": "doc_0",
+        "text": "Human Rights",
+        "position": "174-186"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Fundamental Freedoms",
+        "position": "191-211"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "The Danish",
+        "position": "394-404"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "From November",
+        "position": "2309-2322"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "From January",
+        "position": "2984-2996"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Eastern Denmark",
+        "position": "6797-6812"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "In February",
+        "position": "7346-7357"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "The High",
+        "position": "7954-7962"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Appeal Board",
+        "position": "8768-8780"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "In January",
+        "position": "9006-9016"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Appeal Board",
+        "position": "9215-9227"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Appeal Board",
+        "position": "9589-9601"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "Human Rights",
+        "position": "174-186"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "Fundamental Freedoms",
+        "position": "191-211"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "The Polish",
+        "position": "267-277"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "Foreign Affairs",
+        "position": "378-393"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "Human Rights",
+        "position": "173-185"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "Fundamental Freedoms",
+        "position": "190-210"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "The Turkish",
+        "position": "393-404"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "State Security",
+        "position": "2032-2046"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "Criminal Code",
+        "position": "2277-2290"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "State Security",
+        "position": "2394-2408"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "State Security",
+        "position": "2829-2843"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "European Commission",
+        "position": "127-146"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Human Rights",
+        "position": "150-162"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Human Rights",
+        "position": "227-239"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Fundamental Freedoms",
+        "position": "244-264"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "The Turkish",
+        "position": "498-509"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Dev Yol",
+        "position": "1703-1710"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Devrim Hareketi",
+        "position": "1713-1728"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Turkish People",
+        "position": "1730-1744"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Liberation Party-Front",
+        "position": "1747-1769"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Revolutionary Way",
+        "position": "1772-1789"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Revolutionary Movement",
+        "position": "1792-1814"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Ankara National",
+        "position": "2022-2037"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "National Security",
+        "position": "2612-2629"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Criminal Code",
+        "position": "2698-2711"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "National Security",
+        "position": "2925-2942"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Criminal Code",
+        "position": "3062-3075"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "The National",
+        "position": "3410-3422"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Human Rights",
+        "position": "174-186"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Fundamental Freedoms",
+        "position": "191-211"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "The Polish",
+        "position": "312-322"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Foreign Affairs",
+        "position": "423-438"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Warsaw Regional",
+        "position": "1370-1385"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Warsaw Remand",
+        "position": "1491-1504"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Centre Penitentiary",
+        "position": "1505-1524"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Warsaw Regional",
+        "position": "2061-2076"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Penitentiary Division",
+        "position": "2087-2108"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Warsaw Regional",
+        "position": "3323-3338"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "European Commission",
+        "position": "111-130"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Human Rights",
+        "position": "134-146"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Human Rights",
+        "position": "230-242"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Fundamental Freedoms",
+        "position": "247-267"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "The Turkish",
+        "position": "446-457"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Antalya Security",
+        "position": "1123-1139"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Turkish Revolutionary",
+        "position": "1221-1242"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Communist Party",
+        "position": "1243-1258"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Young Communist",
+        "position": "1261-1276"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Antalya Security",
+        "position": "1318-1334"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Directorate Building",
+        "position": "1335-1355"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Izmir State",
+        "position": "1680-1691"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Criminal Code",
+        "position": "1779-1792"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Izmir State",
+        "position": "1848-1859"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Izmir State",
+        "position": "2178-2189"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Izmir State",
+        "position": "2450-2461"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Human Rights",
+        "position": "174-186"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Fundamental Freedoms",
+        "position": "191-211"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "The Polish",
+        "position": "311-321"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Foreign Affairs",
+        "position": "422-437"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Detention Centre",
+        "position": "1130-1146"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Human Rights",
+        "position": "1598-1610"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Human Rights",
+        "position": "1916-1928"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Amnesty International",
+        "position": "2647-2668"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Detention Centre",
+        "position": "2812-2828"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Transparency International",
+        "position": "3010-3036"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Detention Centre",
+        "position": "3183-3199"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Criminal Department",
+        "position": "3574-3593"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Human Rights",
+        "position": "174-186"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Fundamental Freedoms",
+        "position": "191-211"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "The Polish",
+        "position": "423-433"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Foreign Affairs",
+        "position": "570-585"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Trybunalski Regional",
+        "position": "1052-1072"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Coal Mine",
+        "position": "1140-1149"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Trybunalski Regional",
+        "position": "1196-1216"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Trybunalski Regional",
+        "position": "1577-1597"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Trybunalski Regional",
+        "position": "1940-1960"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Human Rights",
+        "position": "174-186"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Fundamental Freedoms",
+        "position": "191-211"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "The Turkish",
+        "position": "518-529"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Pir Sultan",
+        "position": "1249-1259"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Abdal Cultural",
+        "position": "1260-1274"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara Security",
+        "position": "1832-1847"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "The Security",
+        "position": "1961-1973"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Turkish Liras",
+        "position": "2179-2192"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Criminal Code",
+        "position": "2827-2840"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara Magistrates",
+        "position": "2937-2955"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "The Ankara",
+        "position": "3449-3459"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "First Instance",
+        "position": "3478-3492"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Human Rights",
+        "position": "174-186"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Fundamental Freedoms",
+        "position": "191-211"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "The Turkish",
+        "position": "408-419"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Freedoms Party",
+        "position": "995-1009"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Ankara Criminal",
+        "position": "1295-1310"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "First Instance",
+        "position": "1320-1334"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "European Union",
+        "position": "2296-2310"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "European Convention",
+        "position": "2338-2357"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Human Rights",
+        "position": "2361-2373"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Ankara Criminal",
+        "position": "2783-2798"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "First Instance",
+        "position": "2808-2822"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Criminal Procedure",
+        "position": "3461-3479"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Ankara Criminal",
+        "position": "3519-3534"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "First Instance",
+        "position": "3544-3558"
+      }
+    ],
+    "DATETIME": [
+      {
+        "doc_id": "doc_2",
+        "text": "5138",
+        "position": "54-58"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "On 1 November 2001",
+        "position": "822-840"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "1 November 2004",
+        "position": "845-860"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "2845",
+        "position": "1904-1908"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "2908",
+        "position": "1786-1790"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "0000",
+        "position": "2174-2178"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "0000",
+        "position": "3145-3149"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "2820",
+        "position": "1450-1454"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "2820",
+        "position": "2464-2468"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "2820",
+        "position": "3109-3113"
+      }
+    ]
+  },
+  "false_negatives": {
+    "PERSON": [
+      {
+        "doc_id": "doc_0",
+        "text": "Ms Nina Holst-Christensen",
+        "position": "468-493"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Mr Henrik Hasslund",
+        "position": "253-271"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Mr Tyge Trier",
+        "position": "344-357"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Ms Nina Holst-Christensen",
+        "position": "468-493"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Mr Henrik Hasslund",
+        "position": "253-271"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Mr Tyge Trier",
+        "position": "344-357"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Ms Nina Holst-Christensen",
+        "position": "468-493"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Mr Henrik Hasslund",
+        "position": "253-271"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Mr Tyge Trier",
+        "position": "344-357"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Ms Nina Holst-Christensen",
+        "position": "468-493"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "A",
+        "position": "3648-3649"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "B",
+        "position": "3651-3652"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "N",
+        "position": "3654-3655"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "M",
+        "position": "3657-3658"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "R",
+        "position": "3663-3664"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "M",
+        "position": "6362-6363"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "B",
+        "position": "6385-6386"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "R",
+        "position": "6391-6392"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "N",
+        "position": "6453-6454"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "A",
+        "position": "6459-6460"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "A",
+        "position": "7294-7295"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "A",
+        "position": "8295-8296"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "Mr D. St\u0119pniak",
+        "position": "234-248"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "Mr J. Wo\u0142\u0105siewicz",
+        "position": "341-358"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "Ms B \u00d6zpolat",
+        "position": "345-357"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Mrs E. \u00c7\u0131tak",
+        "position": "451-463"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Mr Sar\u0131",
+        "position": "1386-1393"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Ms \u00c7olak",
+        "position": "1398-1406"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Ms \u00c7olak",
+        "position": "2401-2409"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Mr Sar\u0131",
+        "position": "2474-2481"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Mr Sar\u0131",
+        "position": "2814-2821"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Ms J. Chrzanowska",
+        "position": "386-403"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Mr Dariusz Karwowski",
+        "position": "253-273"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Ms J. Chrzanowska",
+        "position": "386-403"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Mr \u0130lhan Karakurt",
+        "position": "310-327"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Mr A. Erdo\u011fan",
+        "position": "400-413"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Mr J. Wo\u0142\u0105siewicz",
+        "position": "385-402"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Mr W\u0142odzimierz Majewski",
+        "position": "252-275"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Mr W\u0142odzimierz Strzelczyk",
+        "position": "301-326"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Mr K. Drzewicki",
+        "position": "498-513"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Mr J. Wo\u0142\u0105siewicz",
+        "position": "532-549"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr \u0130lhami Erseven",
+        "position": "234-251"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr Hikmet Y\u0131ld\u0131r\u0131m",
+        "position": "253-271"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr \u0130smail \u00d6ztorun",
+        "position": "287-304"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr \u0130smail Kaya",
+        "position": "322-336"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr Kenan Atakul",
+        "position": "338-353"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr S\u00fcleyman \u00c7etinkaya",
+        "position": "355-376"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "\u0130lhami Erseven",
+        "position": "3609-3623"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Bekir Aslan",
+        "position": "3625-3636"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "S\u00fcleyman \u00c7etinkaya",
+        "position": "3638-3656"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "\u0130smail Kaya",
+        "position": "3661-3672"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "\u0130smail \u00d6ztorun",
+        "position": "3706-3720"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Hikmet Y\u0131ld\u0131r\u0131m",
+        "position": "3770-3785"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr \u0130lhami Erseven",
+        "position": "234-251"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr Hikmet Y\u0131ld\u0131r\u0131m",
+        "position": "253-271"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr Veli Ate\u015f",
+        "position": "273-285"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr \u0130smail \u00d6ztorun",
+        "position": "287-304"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr Ellez Duman",
+        "position": "306-320"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr \u0130smail Kaya",
+        "position": "322-336"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr Kenan Atakul",
+        "position": "338-353"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr S\u00fcleyman \u00c7etinkaya",
+        "position": "355-376"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr Bekir Arslan",
+        "position": "381-396"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Mr Fevzi G\u00fcm\u00fc\u015f",
+        "position": "471-485"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "\u0130lhami Erseven",
+        "position": "3609-3623"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Bekir Aslan",
+        "position": "3625-3636"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "S\u00fcleyman \u00c7etinkaya",
+        "position": "3638-3656"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "\u0130smail Kaya;0",
+        "position": "3661-3674"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "\u0130smail \u00d6ztorun",
+        "position": "3706-3720"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Kenan Atakul",
+        "position": "3753-3765"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Hikmet Y\u0131ld\u0131r\u0131m",
+        "position": "3770-3785"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ellez Duman",
+        "position": "3822-3833"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Mr M. Be\u015fta\u015f",
+        "position": "337-349"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Ms M. Dan\u0131\u015f Be\u015fta\u015f",
+        "position": "354-372"
+      }
+    ],
+    "LOC": [
+      {
+        "doc_id": "doc_0",
+        "text": "Switzerland",
+        "position": "3137-3148"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Copenhagen",
+        "position": "382-392"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Les Salles Sur Verdon",
+        "position": "847-868"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "France",
+        "position": "870-876"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "1003-1010"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "3128-3135"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Switzerland",
+        "position": "3137-3148"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Sweden",
+        "position": "3153-3159"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "3184-3191"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Copenhagen",
+        "position": "382-392"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Les Salles Sur Verdon, France",
+        "position": "847-876"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "1003-1010"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "3128-3135"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Switzerland",
+        "position": "3137-3148"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Sweden",
+        "position": "3153-3159"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "3184-3191"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Copenhagen",
+        "position": "382-392"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Les Salles Sur Verdon, France",
+        "position": "847-876"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "1003-1010"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "3128-3135"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Switzerland",
+        "position": "3137-3148"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Sweden",
+        "position": "3153-3159"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Denmark",
+        "position": "3184-3191"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "Bytom",
+        "position": "754-759"
+      },
+      {
+        "doc_id": "doc_2",
+        "text": "Gaziantep",
+        "position": "382-391"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Istanbul",
+        "position": "488-496"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "Ankara",
+        "position": "1484-1490"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Warsaw",
+        "position": "974-980"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "Warsaw",
+        "position": "974-980"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Ankara",
+        "position": "438-444"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Turkey",
+        "position": "1034-1040"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "Antalya Security Directorate Building",
+        "position": "1318-1355"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "Byt\u00f3w",
+        "position": "987-992"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Be\u0142chat\u00f3w",
+        "position": "922-931"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Szczerc\u00f3w",
+        "position": "984-993"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "Rogowiec",
+        "position": "1153-1161"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "510-516"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Izmir",
+        "position": "1160-1165"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Istanbul",
+        "position": "1167-1175"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "\u00c7orum",
+        "position": "1180-1185"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "1365-1371"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "2124-2130"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "2493-2499"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "510-516"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "1152-1158"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Izmir",
+        "position": "1160-1165"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Istanbul",
+        "position": "1167-1175"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "\u00c7orum",
+        "position": "1180-1185"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "1365-1371"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "1412-1418"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "2124-2130"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "Ankara",
+        "position": "2493-2499"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Diyarbak\u0131r",
+        "position": "396-406"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Diyarbak\u0131r",
+        "position": "851-861"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "Ankara",
+        "position": "1093-1099"
+      }
+    ],
+    "DATETIME": [
+      {
+        "doc_id": "doc_0",
+        "text": "ten days",
+        "position": "4618-4626"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "two years",
+        "position": "4894-4903"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "February",
+        "position": "7349-7357"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "ten days",
+        "position": "7598-7606"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "31 August 2006",
+        "position": "294-308"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "beginning of the 1990s",
+        "position": "886-908"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "late 1980s",
+        "position": "1718-1728"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "summer of 1993",
+        "position": "1850-1864"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "9 June 1994",
+        "position": "2053-2064"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "14 June 1994",
+        "position": "2154-2166"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "November 1994",
+        "position": "2314-2327"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 September 1995",
+        "position": "2471-2488"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "22 December 1995",
+        "position": "2694-2710"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "beginning of 1996",
+        "position": "2964-2981"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 March 1997",
+        "position": "3364-3377"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "25 June 1998",
+        "position": "3532-3544"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "March 1992",
+        "position": "3816-3826"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Between 14 August 1998",
+        "position": "4031-4053"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "15 March 1999",
+        "position": "4222-4235"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Between 15 March 1999",
+        "position": "4238-4259"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "ten days",
+        "position": "4618-4626"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "November 2000",
+        "position": "4630-4643"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "January 2001",
+        "position": "4648-4660"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "6 April 2001",
+        "position": "4680-4692"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "two years",
+        "position": "4894-4903"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "15 May 2001",
+        "position": "6696-6707"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "13 September 2001",
+        "position": "6924-6941"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "7020-7037"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "autumn of 2002",
+        "position": "7170-7184"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "7225-7242"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2003",
+        "position": "7279-7283"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2004",
+        "position": "7288-7292"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "February",
+        "position": "7349-7357"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "March 2004",
+        "position": "7362-7372"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "ten days",
+        "position": "7598-7606"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "April, May",
+        "position": "7610-7620"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "June 2004",
+        "position": "7626-7635"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "28 September 2004",
+        "position": "7641-7658"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 September 1995",
+        "position": "7910-7927"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "13 September 2001",
+        "position": "8200-8217"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "12 August 2002",
+        "position": "8279-8293"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "autumn 2002",
+        "position": "8328-8339"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "beginning of 2003",
+        "position": "8348-8365"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "8584-8601"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "7 to 12 October 2004",
+        "position": "8682-8702"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "17 December 2004",
+        "position": "8988-9004"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "January 2005",
+        "position": "9009-9021"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "29 March 2005",
+        "position": "9088-9101"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "5 August 2005",
+        "position": "9188-9201"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "9 August 2005",
+        "position": "9313-9326"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2 May 2006",
+        "position": "9537-9547"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2 and 13 June 2006",
+        "position": "9760-9778"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "21 June 2006",
+        "position": "9832-9844"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "31 August 2006",
+        "position": "294-308"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1973",
+        "position": "829-833"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "beginning of the 1990s",
+        "position": "886-908"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "late 1980s",
+        "position": "1718-1728"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1994",
+        "position": "1735-1739"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "summer of 1993",
+        "position": "1850-1864"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1994",
+        "position": "1870-1874"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "9 June 1994",
+        "position": "2053-2064"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "14 June 1994",
+        "position": "2154-2166"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "November 1994",
+        "position": "2314-2327"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "September 1995",
+        "position": "2331-2345"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 September 1995",
+        "position": "2471-2488"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "22 December 1995",
+        "position": "2694-2710"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "beginning of 1996",
+        "position": "2964-2981"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "January 1996 to June 1998",
+        "position": "2989-3014"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 March 1997",
+        "position": "3364-3377"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "25 June 1998",
+        "position": "3532-3544"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "between March 1992 and May 1993",
+        "position": "3808-3839"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Between 14 August 1998",
+        "position": "4031-4053"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "10 March 1999",
+        "position": "4058-4071"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "15 March 1999",
+        "position": "4222-4235"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "Between 15 March 1999",
+        "position": "4238-4259"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "31 January 2001",
+        "position": "4264-4279"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "ten days",
+        "position": "4618-4626"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "November 2000",
+        "position": "4630-4643"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "January 2001",
+        "position": "4648-4660"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "6 April 2001",
+        "position": "4680-4692"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "two years",
+        "position": "4894-4903"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "15 May 2001",
+        "position": "6696-6707"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "13 September 2001",
+        "position": "6924-6941"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "7020-7037"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "autumn of 2002",
+        "position": "7170-7184"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "7225-7242"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2003",
+        "position": "7279-7283"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2004",
+        "position": "7288-7292"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "February",
+        "position": "7349-7357"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "March 2004",
+        "position": "7362-7372"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "ten days",
+        "position": "7598-7606"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "April, May",
+        "position": "7610-7620"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "June 2004",
+        "position": "7626-7635"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "28 September 2004",
+        "position": "7641-7658"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 September 1995",
+        "position": "7910-7927"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "13 September 2001",
+        "position": "8200-8217"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "12 August 2002",
+        "position": "8279-8293"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "autumn 2002",
+        "position": "8328-8339"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "beginning of 2003",
+        "position": "8348-8365"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "8584-8601"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "7 to 12 October 2004",
+        "position": "8682-8702"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "17 December 2004",
+        "position": "8988-9004"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "January 2005",
+        "position": "9009-9021"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "29 March 2005",
+        "position": "9088-9101"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "5 August 2005",
+        "position": "9188-9201"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "9 August 2005",
+        "position": "9313-9326"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2 May 2006",
+        "position": "9537-9547"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2 and 13 June 2006",
+        "position": "9760-9778"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "21 June 2006",
+        "position": "9832-9844"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "31 August 2006",
+        "position": "294-308"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1973",
+        "position": "829-833"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1990",
+        "position": "903-907"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1980s until 1994",
+        "position": "1723-1739"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1993",
+        "position": "1860-1864"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1994",
+        "position": "1870-1874"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "9 June 1994",
+        "position": "2053-2064"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "14 June 1994",
+        "position": "2154-2166"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "November 1994",
+        "position": "2314-2327"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "September 1995",
+        "position": "2331-2345"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 September 1995",
+        "position": "2471-2488"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "22 December 1995",
+        "position": "2694-2710"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "1996",
+        "position": "2977-2981"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "January 1996",
+        "position": "2989-3001"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "June 1998",
+        "position": "3005-3014"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 March 1997",
+        "position": "3364-3377"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "25 June 1998",
+        "position": "3532-3544"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "March 1992",
+        "position": "3816-3826"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "May 1993",
+        "position": "3831-3839"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "14 August 1998",
+        "position": "4039-4053"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "10 March 1999",
+        "position": "4058-4071"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "15 March 1999",
+        "position": "4222-4235"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "15 March 1999",
+        "position": "4246-4259"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "31 January 2001",
+        "position": "4264-4279"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "ten days",
+        "position": "4618-4626"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "November 2000",
+        "position": "4630-4643"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "January 2001",
+        "position": "4648-4660"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "6 April 2001",
+        "position": "4680-4692"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "two years",
+        "position": "4894-4903"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "15 May 2001",
+        "position": "6696-6707"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "13 September 2001",
+        "position": "6924-6941"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "7020-7037"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2002",
+        "position": "7180-7184"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "7225-7242"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2003",
+        "position": "7279-7283"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2004",
+        "position": "7288-7292"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "February and March 2004",
+        "position": "7349-7372"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "ten days",
+        "position": "7598-7606"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "April, May, and June 2004",
+        "position": "7610-7635"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "28 September 2004",
+        "position": "7641-7658"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "19 September 1995",
+        "position": "7910-7927"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "13 September 2001",
+        "position": "8200-8217"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "12 August 2002",
+        "position": "8279-8293"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2002",
+        "position": "8335-8339"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2003",
+        "position": "8361-8365"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "24 September 2002",
+        "position": "8584-8601"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "7 to 12 October 2004",
+        "position": "8682-8702"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "17 December 2004",
+        "position": "8988-9004"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "January 2005",
+        "position": "9009-9021"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "29 March 2005",
+        "position": "9088-9101"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "5 August 2005",
+        "position": "9188-9201"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "9 August 2005",
+        "position": "9313-9326"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2 May 2006",
+        "position": "9537-9547"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "2 and 13 June 2006",
+        "position": "9760-9778"
+      },
+      {
+        "doc_id": "doc_0",
+        "text": "21 June 2006",
+        "position": "9832-9844"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "10 July",
+        "position": "1247-1254"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "19 January",
+        "position": "1330-1340"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "7 January",
+        "position": "2779-2788"
+      },
+      {
+        "doc_id": "doc_1",
+        "text": "18 February",
+        "position": "2790-2801"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "11.45 p.m.",
+        "position": "1517-1527"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "11.45 p.m.",
+        "position": "2212-2222"
+      },
+      {
+        "doc_id": "doc_3",
+        "text": "three years and nine months",
+        "position": "3098-3125"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "seven days",
+        "position": "2043-2053"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "19 March 2013",
+        "position": "296-309"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "7 July 2014",
+        "position": "659-670"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "1971",
+        "position": "936-940"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "17 January 2006",
+        "position": "1033-1048"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "27 February 2013",
+        "position": "1349-1365"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "19 January 2006",
+        "position": "1471-1486"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "seven days",
+        "position": "2043-2053"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "3 January 2013",
+        "position": "2940-2954"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "30 January 2013",
+        "position": "3303-3318"
+      },
+      {
+        "doc_id": "doc_4",
+        "text": "21 November 2013",
+        "position": "3421-3437"
+      },
+      {
+        "doc_id": "doc_5",
+        "text": "12 years and 6 months",
+        "position": "1931-1952"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "three years",
+        "position": "1258-1269"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "two years and four months",
+        "position": "1409-1434"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "2 October",
+        "position": "1736-1745"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "4 December",
+        "position": "2032-2042"
+      },
+      {
+        "doc_id": "doc_6",
+        "text": "3 December",
+        "position": "3097-3107"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "22 February",
+        "position": "1804-1815"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "26 September",
+        "position": "1817-1829"
+      },
+      {
+        "doc_id": "doc_7",
+        "text": "5 November",
+        "position": "1831-1841"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "ten-day",
+        "position": "2437-2444"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "22 April 2002",
+        "position": "420-433"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "13 June 2006",
+        "position": "645-657"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1954",
+        "position": "1074-1078"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1957",
+        "position": "1080-1084"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1961",
+        "position": "1086-1090"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1965",
+        "position": "1092-1096"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1960",
+        "position": "1098-1102"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1956",
+        "position": "1104-1108"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1959",
+        "position": "1110-1114"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1964",
+        "position": "1116-1120"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "1958",
+        "position": "1125-1129"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "15 November 2000",
+        "position": "1377-1393"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "21 November 2000",
+        "position": "1797-1813"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "15 January 2001",
+        "position": "2286-2301"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "17 April 2001",
+        "position": "2475-2488"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "11 September 2001",
+        "position": "2915-2932"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "8, 9, 12 and 22 October 2001",
+        "position": "3166-3194"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "11 September 2001",
+        "position": "3252-3269"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "11 October 2001",
+        "position": "3579-3594"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "15 October 2001",
+        "position": "3676-3691"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "22 October 2001",
+        "position": "3723-3738"
+      },
+      {
+        "doc_id": "doc_8",
+        "text": "30 October 2001",
+        "position": "3792-3807"
+      },
+      {
+        "doc_id": "doc_9",
+        "text": "one year\u2019s",
+        "position": "3146-3156"
+      }
+    ]
+  }
+}
