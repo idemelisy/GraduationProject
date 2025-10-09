@@ -47,9 +47,9 @@ def main():
     print("=== AI4Privacy PII Detection Script ===")
     
     try:
-        # Load annotations
-        print("Loading annotations...")
-        with open('/home/ide/ide/ECHR_mask/annotations.json', 'r', encoding='utf-8') as f:
+        # Load input
+        print("Loading the input...")
+        with open('/home/ide/ide/data/input.json', 'r', encoding='utf-8') as f:
             data = json.load(f)
         
         print(f"Loaded {len(data)} documents")
