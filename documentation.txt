@@ -1,0 +1,34 @@
+Text Normalization for Legal Document Processing
+Background and Motivation
+In natural language processing tasks involving legal documents, particularly those extracted from case law databases such as the European Court of Human Rights (ECHR) corpus, raw text data often contains formatting artifacts that can negatively impact downstream processing tasks. These artifacts typically manifest as irregular whitespace patterns, including consecutive newline characters (\n\n) that represent paragraph breaks or section separators in the original document formatting.
+
+Normalization Methodology
+We implemented a systematic text normalization procedure to address these formatting inconsistencies while preserving the semantic content and structural integrity of the legal documents. The normalization process consisted of the following steps:
+
+Whitespace Consolidation: Multiple consecutive newline characters (\n\n, \n\n\n, etc.) were replaced with single space characters to eliminate artificial paragraph breaks that do not contribute semantic meaning in the context of named entity recognition tasks.
+
+Redundant Space Removal: Multiple consecutive space characters were consolidated into single spaces to ensure consistent token boundaries.
+
+Leading and Trailing Whitespace Removal: Document-level whitespace padding was removed to standardize document boundaries.
+
+Implementation Details
+The normalization function was designed to process JSON-formatted annotation files containing document metadata, text content, and entity annotations. Critically, the process preserved all annotation metadata while applying transformations exclusively to the text content, ensuring that:
+
+Document identifiers (doc_id) remained unchanged
+Entity annotations (spans, types, annotator information) were preserved intact
+Only the text field underwent normalization
+Rationale for Normalization
+This preprocessing step serves several important purposes in legal document analysis:
+
+Consistency: Standardizing whitespace patterns ensures uniform input for downstream NLP models, reducing variance introduced by formatting artifacts.
+
+Annotation Alignment: By normalizing text while preserving annotation metadata, we maintain the integrity of human-annotated entity labels, which is crucial for supervised learning tasks.
+
+Model Performance: Eliminating extraneous whitespace characters reduces noise in the input data, potentially improving the performance of named entity recognition and other NLP tasks.
+
+Reproducibility: Standardized text preprocessing ensures consistent results across different experimental runs and facilitates comparison with other research using similar datasets.
+
+Validation
+The normalization process was validated by comparing the original and processed files to confirm that only whitespace-related changes were applied, with no alterations to semantic content or annotation metadata. This verification step ensures the integrity of the dataset for subsequent analysis tasks.
+
+This normalization approach follows established best practices in legal NLP preprocessing while maintaining the high standards of data integrity required for academic research involving annotated corpora
